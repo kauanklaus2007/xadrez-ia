@@ -1,0 +1,65 @@
+Python 3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+...       let move = chooseSmartMove(possibleMoves);
+...       chess.move(move);
+...       updateBoard();
+...     }
+...
+...     function chooseSmartMove(moves) {
+...       const history = getPlayerHistory();
+...       for (let m of moves) {
+...         if (history.some(h => h.to === m)) {
+...           return m; // tenta bloquear o movimento mais usado pelo jogador
+...         }
+...       }
+...       return moves[Math.floor(Math.random() * moves.length)];
+...     }
+...
+...     function savePlayerMove(from, to) {
+...       const history = JSON.parse(localStorage.getItem('player_moves') || '[]');
+...       history.push({ from, to });
+...       localStorage.setItem('player_moves', JSON.stringify(history));
+...     }
+...
+...     function getPlayerHistory() {
+...       return JSON.parse(localStorage.getItem('player_moves') || '[]');
+...     }
+...
+...     loadImages(updateBoard);
+...   </script>
+... </body>
+... </html>
+
+  File "<python-input-0>", line 8
+    canvas { border: 2px solid #fff; margin-top: 20px; }
+                     ^
+SyntaxError: invalid decimal literal
+...       let move = chooseSmartMove(possibleMoves);
+...       chess.move(move);
+...       updateBoard();
+...     }
+...
+...     function chooseSmartMove(moves) {
+...       const history = getPlayerHistory();
+...       for (let m of moves) {
+...         if (history.some(h => h.to === m)) {
+...           return m; // tenta bloquear o movimento mais usado pelo jogador
+...         }
+...       }
+...       return moves[Math.floor(Math.random() * moves.length)];
+...     }
+...
+...     function savePlayerMove(from, to) {
+...       const history = JSON.parse(localStorage.getItem('player_moves') || '[]');
+...       history.push({ from, to });
+...       localStorage.setItem('player_moves', JSON.stringify(history));
+...     }
+...
+...     function getPlayerHistory() {
+...       return JSON.parse(localStorage.getItem('player_moves') || '[]');
+...     }
+...
+...     loadImages(updateBoard);
+...   </script>
+... </body>
+... </html>
