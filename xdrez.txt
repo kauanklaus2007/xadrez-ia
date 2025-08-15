@@ -1,65 +1,67 @@
 Python 3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
-...       let move = chooseSmartMove(possibleMoves);
-...       chess.move(move);
-...       updateBoard();
-...     }
-...
-...     function chooseSmartMove(moves) {
-...       const history = getPlayerHistory();
-...       for (let m of moves) {
-...         if (history.some(h => h.to === m)) {
-...           return m; // tenta bloquear o movimento mais usado pelo jogador
-...         }
-...       }
-...       return moves[Math.floor(Math.random() * moves.length)];
-...     }
-...
-...     function savePlayerMove(from, to) {
-...       const history = JSON.parse(localStorage.getItem('player_moves') || '[]');
-...       history.push({ from, to });
-...       localStorage.setItem('player_moves', JSON.stringify(history));
-...     }
-...
-...     function getPlayerHistory() {
-...       return JSON.parse(localStorage.getItem('player_moves') || '[]');
-...     }
-...
-...     loadImages(updateBoard);
-...   </script>
-... </body>
-... </html>
+>>> // Criar o jogo
+  File "<python-input-0>", line 1
+    // Criar o jogo
+    ^^
+SyntaxError: invalid syntax
+>>> const Chess = require("chess.js").Chess;
+  File "<python-input-1>", line 1
+    const Chess = require("chess.js").Chess;
+          ^^^^^
+SyntaxError: invalid syntax
+>>> const game = new Chess();
+  File "<python-input-2>", line 1
+    const game = new Chess();
+          ^^^^
+SyntaxError: invalid syntax
+>>>
+>>> // Fazer um movimento
+  File "<python-input-4>", line 1
+    // Fazer um movimento
+    ^^
+SyntaxError: invalid syntax
+>>> game.move("e4");
+Traceback (most recent call last):
+  File "<python-input-5>", line 1, in <module>
+    game.move("e4");
+    ^^^^
+NameError: name 'game' is not defined
+>>>
+>>> // Mostrar o estado do tabuleiro
+  File "<python-input-7>", line 1
+    // Mostrar o estado do tabuleiro
+    ^^
+SyntaxError: invalid syntax
+>>> console.log(game.ascii());
+Traceback (most recent call last):
+  File "<python-input-8>", line 1, in <module>
+    console.log(game.ascii());
+    ^^^^^^^
+NameError: name 'console' is not defined
+>>>
+>>> // Mostrar todos os movimentos possíveis da posição atual
+  File "<python-input-10>", line 1
+    // Mostrar todos os movimentos possíveis da posição atual
+    ^^
+SyntaxError: invalid syntax
+>>> console.log(game.moves());
+Traceback (most recent call last):
+  File "<python-input-11>", line 1, in <module>
+    console.log(game.moves());
+    ^^^^^^^
+NameError: name 'console' is not defined
+>>>
+>>> // Verificar se o jogo acabou
+  File "<python-input-13>", line 1
+    // Verificar se o jogo acabou
+    ^^
+SyntaxError: invalid syntax
+>>> console.log("Acabou?", game.game_over());
+Traceback (most recent call last):
+  File "<python-input-14>", line 1, in <module>
+    console.log("Acabou?", game.game_over());
+    ^^^^^^^
+NameError: name 'console' is not defined
+>>>
 
-  File "<python-input-0>", line 8
-    canvas { border: 2px solid #fff; margin-top: 20px; }
-                     ^
-SyntaxError: invalid decimal literal
-...       let move = chooseSmartMove(possibleMoves);
-...       chess.move(move);
-...       updateBoard();
-...     }
-...
-...     function chooseSmartMove(moves) {
-...       const history = getPlayerHistory();
-...       for (let m of moves) {
-...         if (history.some(h => h.to === m)) {
-...           return m; // tenta bloquear o movimento mais usado pelo jogador
-...         }
-...       }
-...       return moves[Math.floor(Math.random() * moves.length)];
-...     }
-...
-...     function savePlayerMove(from, to) {
-...       const history = JSON.parse(localStorage.getItem('player_moves') || '[]');
-...       history.push({ from, to });
-...       localStorage.setItem('player_moves', JSON.stringify(history));
-...     }
-...
-...     function getPlayerHistory() {
-...       return JSON.parse(localStorage.getItem('player_moves') || '[]');
-...     }
-...
-...     loadImages(updateBoard);
-...   </script>
-... </body>
-... </html>
